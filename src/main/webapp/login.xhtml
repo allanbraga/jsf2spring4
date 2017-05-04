@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:my="http://www.XXXX.com/my/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:security="http://www.springframework.org/security/facelets/tags">
+    
+    
+ <h:head>
+	<title>Monthly Status Report - MasterCard IT - Wipro</title>
+	<link rel="shortcut icon" type="image/x-icon" href="#{request.contextPath}/images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/style.css" />
+</h:head>	
+<p:panel styleClass="content">
+	<p:dialog header="Login" closable="false" resizable="false" draggable="false" visible="true" widgetVar="dlg1" minHeight="300" width="350" >
+		<center>
+			<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+	        
+	        <form action="${request.contextPath}/login" method="POST" id="myForm">        	
+	            <p:panelGrid columns="2">  
+	                <h:outputLabel for="login" value="User: " />  
+	                <h:inputText id="login" name="login" required="true" requiredMessage="User name is required" autocomplete="false"/>  
+	                <h:outputLabel for="password" value="Password: " />  
+	                <h:inputSecret id="password" name="password" required="true" requiredMessage="Password is required"/>  
+					<input value="Login" type="submit"/>
+	            </p:panelGrid>  
+	        </form>
+		</center>    
+	</p:dialog>			
+</p:panel>
+			
+	
+</html>
